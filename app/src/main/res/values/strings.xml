@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FitNow</string>
+    <string name="title_home">Home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_places">Place</string>
+    <string name="title_foods">Food</string>
+    <string name="title_personals">Personal</string>
+    <string name="title_chats">Chat</string>
+    <string name="card_event_more_title">More</string>
+    <string name="title_activity_more_event">"More Event "</string>
+</resources>
