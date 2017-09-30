@@ -19,10 +19,14 @@ import pe.edu.upc.fitnow.models.Event;
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder> {
     private List<Event> events;
 
-    public EventsAdapter setEvents(List<Event> events){
-        this.events = events;
-        return this;
+    public EventsAdapter(List<Event> events) {
+        this.setEvents(events);
     }
+
+    public EventsAdapter() {
+    }
+
+
     @Override
     public EventsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(
@@ -35,12 +39,27 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
     public void onBindViewHolder(EventsAdapter.ViewHolder holder, int position) {
         Event event = events.get(position);
         holder.nameTextView.setText(event.getName());
+        holder.moreTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
     }
 
     @Override
     public int getItemCount() {
         return events.size();
+    }
+
+    public List<Event> getEvents() {
+        return events;
+    }
+
+    public EventsAdapter setEvents(List<Event> events) {
+        this.events = events;
+        return this;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
