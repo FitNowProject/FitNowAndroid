@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigateAccordingTo(R.id.navigation_home);
     }
-
+    
     private boolean navigateAccordingTo(int id){
         try{
             getSupportFragmentManager()
