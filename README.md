@@ -2,4 +2,3 @@
 
 Este es un proyecto desarrollado en Android.
 
-Chema 
