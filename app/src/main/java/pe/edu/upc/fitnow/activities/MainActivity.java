@@ -1,21 +1,27 @@
 package pe.edu.upc.fitnow.activities;
 
+import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
 import pe.edu.upc.fitnow.R;
+import pe.edu.upc.fitnow.adapters.EventsAdapter;
 import pe.edu.upc.fitnow.fragments.ChatFragment;
 import pe.edu.upc.fitnow.fragments.FoodFragment;
 import pe.edu.upc.fitnow.fragments.HomeFragment;
 import pe.edu.upc.fitnow.fragments.PersonalFragment;
 import pe.edu.upc.fitnow.fragments.PlaceFragment;
+import pe.edu.upc.fitnow.model.EventsRepository;
+
+import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
 
 public class MainActivity extends AppCompatActivity {
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -30,20 +36,11 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigateAccordingTo(R.id.navigation_home);
+
     }
-    
-    private boolean navigateAccordingTo(int id){
-        try{
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.content, getFragmentFor(id))
-                    .commit();
-            return true;
-        }catch (NullPointerException e){
-            e.printStackTrace();
-            return false;
-        }
-    }
+
+
+
 
     private Fragment getFragmentFor(int id){
         switch(id){
@@ -59,5 +56,18 @@ public class MainActivity extends AppCompatActivity {
                     return new ChatFragment();
         }
         return null;
+    }
+
+    private boolean navigateAccordingTo(int id){
+        try{
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content, getFragmentFor(id))
+                    .commit();
+            return true;
+        }catch (NullPointerException e){
+            e.printStackTrace();
+            return false;
+        }
     }
 }
