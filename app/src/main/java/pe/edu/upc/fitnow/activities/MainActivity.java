@@ -47,16 +47,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Fragment getFragmentFor(int id){
         switch(id){
-            case R.id.navigation_home:
-                return new HomeFragment();
-            case R.id.navigation_food:
-                return new FoodFragment();
-            case R.id.navigation_place:
-                return new PlaceFragment();
-            case R.id.navigation_personal:
-                return new PersonalFragment();
-            case R.id.navigation_chat:
-                return new ChatFragment();
+                case R.id.navigation_home:
+                    return new HomeFragment();
+                case R.id.navigation_food:
+                    return new FoodFragment();
+                case R.id.navigation_place:
+                    return new PlaceFragment();
+                case R.id.navigation_personal:
+                    return new PersonalFragment();
+                case R.id.navigation_chat:
+                    return new ChatFragment();
         }
         return null;
     }
