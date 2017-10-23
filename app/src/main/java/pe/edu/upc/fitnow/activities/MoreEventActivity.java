@@ -27,6 +27,7 @@ public class MoreEventActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //Prueba
     }
 
 }
