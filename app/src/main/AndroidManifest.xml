@@ -27,8 +27,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pe.edu.upc.fitnow.activities.MainActivity" />
         </activity>
+        <activity android:name=".activities.SplashActivity"></activity>
     </application>
 
 </manifest>
-
-

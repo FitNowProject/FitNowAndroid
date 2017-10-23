@@ -1,104 +1,113 @@
 package pe.edu.upc.fitnow.models;
 
-import java.util.List;
-
 /**
- * Created by Dreads on 29/09/2017.
+ * Created by mac on 10/23/17.
  */
 
 public class Event {
-    private  String id;
-    private String name;
-    private String description;
-    private String url;
-    private String category;
-    private String language;
-    private String country;
-    private List<String> sortBysAvailable;
+    private int id;
+    private String type;
+    private int image;
+    private String place;
+    private String date;
+    private String hour_start;
+    private String hour_finish;
+    private int distance;
+    private int members;
 
-    public Event(String id, String name, String description, String url, String category, String language, String country, List<String> sortBysAvailable) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.url = url;
-        this.category = category;
-        this.language = language;
-        this.country = country;
-        this.sortBysAvailable = sortBysAvailable;
+    public Event(int id,String type, int image, String place, String date, String hour_start, String hour_finish, int distance, int members) {
+        this.id=id;
+        this.type = type;
+        this.image = image;
+        this.place = place;
+        this.date = date;
+        this.hour_start = hour_start;
+        this.hour_finish = hour_finish;
+        this.distance = distance;
+        this.members = members;
     }
 
     public Event() {
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public Event setId(String id) {
+    public Event setId(int id) {
         this.id = id;
         return this;
     }
 
-    public String getName() {
-        return name;
+    public int getImage() {
+        return image;
     }
 
-    public Event setName(String name) {
-        this.name = name;
+    public Event setImage(int image) {
+        this.image = image;
         return this;
     }
 
-    public String getDescription() {
-        return description;
+    public String getPlace() {
+        return place;
     }
 
-    public Event setDescription(String description) {
-        this.description = description;
+    public Event setPlace(String place) {
+        this.place = place;
         return this;
     }
 
-    public String getUrl() {
-        return url;
+    public String getDate() {
+        return date;
     }
 
-    public Event setUrl(String url) {
-        this.url = url;
+    public Event setDate(String date) {
+        this.date = date;
         return this;
     }
 
-    public String getCategory() {
-        return category;
+    public String getHour_start() {
+        return hour_start;
     }
 
-    public Event setCategory(String category) {
-        this.category = category;
+    public Event setHour_start(String hour_start) {
+        this.hour_start = hour_start;
         return this;
     }
 
-    public String getLanguage() {
-        return language;
+    public String getType() {
+        return type;
     }
 
-    public Event setLanguage(String language) {
-        this.language = language;
+    public Event setType(String type) {
+        this.type = type;
         return this;
     }
 
-    public String getCountry() {
-        return country;
+    public String getHour_finish() {
+        return hour_finish;
     }
 
-    public Event setCountry(String country) {
-        this.country = country;
+    public Event setHour_finish(String hour_finish) {
+        this.hour_finish = hour_finish;
         return this;
     }
 
-    public List<String> getSortBysAvailable() {
-        return sortBysAvailable;
+    public int getDistance() {
+        return distance;
     }
 
-    public Event setSortBysAvailable(List<String> sortBysAvailable) {
-        this.sortBysAvailable = sortBysAvailable;
+    public Event setDistance(int distance) {
+        this.distance = distance;
+        return this;
+    }
+
+    public int getMembers() {
+        return members;
+    }
+
+    public Event setMembers(int members) {
+        this.members = members;
         return this;
     }
 }
