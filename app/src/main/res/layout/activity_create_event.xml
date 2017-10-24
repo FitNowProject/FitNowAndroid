@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pe.edu.upc.fitnow.activities.CreateEventActivity"
+    android:layout_margin="16dp">
+    <TextView
+        android:id="@+id/createeventTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATE EVENT"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/constraint1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/createeventTextView"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/activityImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_fitness_center_black_24dp" />
+            <Spinner
+                android:id="@+id/activitySpinner"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:spinnerMode="dialog"
+                app:layout_constraintStart_toEndOf="@id/activityImageView" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/constraint2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraint1"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/placeImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_place_black_24dp"
+                android:layout_margin="16dp" />
+
+            <EditText
+                android:id="@+id/placeEditText"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:hint="Place"
+                app:layout_constraintStart_toEndOf="@id/placeImageView"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/constraint3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraint2"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/dateImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_date_range_black_24dp"/>
+            <EditText
+                android:id="@+id/dateEditText"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:hint="Date"
+                app:layout_constraintStart_toEndOf="@id/dateImageView"
+                android:inputType="none" />
+            <TextView
+                android:id="@+id/separador1TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="//"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/dateEditText"/>
+            <ImageView
+                android:id="@+id/quantityImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_supervisor_account_black_24dp"
+                app:layout_constraintStart_toEndOf="@id/separador1TextView" />
+            <Spinner
+                android:id="@+id/quantitySpinner"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="Nº people"
+                app:layout_constraintStart_toEndOf="@id/quantityImageView" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/constraint4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraint3"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/timeImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_query_builder_black_24dp"/>
+            <EditText
+                android:id="@+id/starttimeEditText"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:hint="Start Time"
+                app:layout_constraintStart_toEndOf="@id/timeImageView" />
+            <TextView
+                android:id="@+id/separadorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="//"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/starttimeEditText" />
+            <EditText
+                android:id="@+id/finishtimeEditText"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:hint="Finish Time"
+                app:layout_constraintStart_toEndOf="@id/separadorTextView" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/constraint5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/constraint4"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/descriptionImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_mode_edit_black_24dp" />
+            <EditText
+                android:id="@+id/descriptionEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                app:layout_constraintStart_toEndOf="@id/descriptionImageView"
+                />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next" />
+
+
+</android.support.constraint.ConstraintLayout>
