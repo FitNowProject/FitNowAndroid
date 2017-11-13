@@ -21,66 +21,59 @@ import pe.edu.upc.fitnow.model.Event;
 
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder> {
     private List<Event> events;
-
+    public EventsAdapter() {
+    }
     public EventsAdapter(List<Event> events) {
         this.setEvents(events);
     }
 
-    public EventsAdapter() {
-    }
-
-
-    @Override
-    public EventsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(
-                LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.card_event, parent, false));
-    }
-
-    @Override
-    public void onBindViewHolder(EventsAdapter.ViewHolder holder, int position) {
-        final Event event = events.get(position);
-        holder.nameTextView.setText(events.get(position).getName());
-        holder.descriptionTextView.setText(events.get(position).getDescription());
-        holder.logoImageView.setImageResource(event.getPictureId());
-        holder.moreTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Context context = view.getContext();
-                Intent intent = new Intent(context, MoreEventActivity.class);
-                intent.putExtras(event.toBundle());
-                context.startActivity(intent);
-                // TODO: Start Event Profile Activity;
-            }
-        });
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return events.size();
-    }
 
     public List<Event> getEvents() {
         return events;
     }
-
     public EventsAdapter setEvents(List<Event> events) {
         this.events = events;
         return this;
     }
 
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        //LLamamos al card event del layout
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_event,parent,false);
+        ViewHolder holder= new ViewHolder(view);
+        return holder;
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        final Event event = events.get(position);
+        holder.addressTextView.setText(event.getAddress());
+        holder.dateTextView.setText(event.getDate());
+        holder.hour_startTextView.setText(event.getHour_start());
+        holder.timeTextView.setText(event.getTime());
+        holder.membersTextView.setText(Integer.toString(event.getMembers()));
+    }
+
+    @Override
+    public int getItemCount() {
+        return null != events ? events.size() : 0;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
-        ImageView logoImageView;
-        TextView nameTextView;
-        TextView descriptionTextView;
-        TextView moreTextView;
+        public TextView addressTextView;
+        public TextView dateTextView;
+        public TextView hour_startTextView;
+        public TextView timeTextView;
+        public TextView membersTextView;
         public ViewHolder(View itemView) {
             super(itemView);
-            logoImageView = (ImageView) itemView.findViewById(R.id.logoImageView);
-            nameTextView = (TextView) itemView.findViewById(R.id.nameTextView);
-            descriptionTextView = (TextView) itemView.findViewById(R.id.descriptionTextView);
-            moreTextView = (TextView) itemView.findViewById(R.id.moreTextView);
+            //LLamamos los Id del Layout para tenerlos como objeto
+            addressTextView= (TextView) itemView.findViewById(R.id.addressTextView);
+            dateTextView = (TextView) itemView.findViewById(R.id.dateTextView);
+            hour_startTextView = (TextView) itemView.findViewById(R.id.hour_startTextView);
+            timeTextView = (TextView) itemView.findViewById(R.id.timeTextView);
+            membersTextView = (TextView) itemView.findViewById(R.id.membersTextview);
         }
     }
 }
