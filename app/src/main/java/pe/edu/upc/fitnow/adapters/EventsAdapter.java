@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.androidnetworking.widget.ANImageView;
 
 import java.util.List;
 
@@ -53,6 +54,11 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         holder.hour_startTextView.setText(event.getHour_start());
         holder.timeTextView.setText(event.getTime());
         holder.membersTextView.setText(Integer.toString(event.getMembers()));
+        holder.typeTextView.setText(event.getType());
+        holder.pictureANImageView.setDefaultImageResId(R.mipmap.ic_launcher);
+        holder.pictureANImageView.setErrorImageResId(R.mipmap.ic_launcher);
+        holder.pictureANImageView.setImageUrl(event.getImage());
+
     }
 
     @Override
@@ -66,6 +72,8 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         public TextView hour_startTextView;
         public TextView timeTextView;
         public TextView membersTextView;
+        public TextView typeTextView;
+        public ANImageView pictureANImageView;
         public ViewHolder(View itemView) {
             super(itemView);
             //LLamamos los Id del Layout para tenerlos como objeto
@@ -74,6 +82,8 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
             hour_startTextView = (TextView) itemView.findViewById(R.id.hour_startTextView);
             timeTextView = (TextView) itemView.findViewById(R.id.timeTextView);
             membersTextView = (TextView) itemView.findViewById(R.id.membersTextview);
+            typeTextView = (TextView) itemView.findViewById(R.id.type_eventTextView);
+            pictureANImageView = (ANImageView) itemView.findViewById(R.id.pictureANImageView);
         }
     }
 }

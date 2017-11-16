@@ -5,21 +5,76 @@ package pe.edu.upc.fitnow.model;
  */
 
 public class Event {
-    private String address;
+
     private String date;
     private String hour_start;
     private int members;
     private String time;
+    private String description;
+    //TYPE EVENT
+    private String image;
+    private String type;
+    //PLACE
+    private String address;
 
-    public Event(String address, String date, String hour_start, int members, String time) {
-        this.address = address;
+    //****
+    private String typeevent;
+    private String place;
+
+    public Event(String date, String hour_start, int members, String time, String description, String typeevent, String place) {
         this.date = date;
         this.hour_start = hour_start;
         this.members = members;
         this.time = time;
+        this.description = description;
+        this.typeevent = typeevent;
+        this.place = place;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public Event setPlace(String place) {
+        this.place = place;
+        return this;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public Event setImage(String image) {
+        this.image = image;
+        return this;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public Event setType(String type) {
+        this.type = type;
+        return this;
     }
 
     public Event() {
+    }
+    public String getTypeevent() {
+        return typeevent;
+    }
+
+    public Event setTypeevent(String typeevent) {
+        this.typeevent = typeevent;
+        return this;
     }
 
     public String getAddress() {

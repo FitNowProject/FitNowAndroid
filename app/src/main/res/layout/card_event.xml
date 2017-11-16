@@ -12,8 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
-
-
         <TextView
             android:id="@+id/type_eventTextView"
             android:layout_width="wrap_content"
@@ -29,20 +27,20 @@
             app:layout_constraintTop_toBottomOf="@+id/type_eventTextView"
             android:background="#ffd5d5d5"
             android:layout_margin="8dp"/>
-        <ImageView
-            android:id="@+id/pictureImageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher"
+        <com.androidnetworking.widget.ANImageView
+            android:id="@+id/pictureANImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             app:layout_constraintTop_toBottomOf="@+id/type_eventTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="8dp" />
+            android:src="@mipmap/ic_launcher" />
         <View
             android:id="@+id/linea2View"
             android:layout_width="wrap_content"
             android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/pictureImageView"
+            app:layout_constraintTop_toBottomOf="@+id/pictureANImageView"
             android:background="#ffd5d5d5"
             android:layout_margin="8dp"/>
         <TextView
@@ -50,8 +48,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ADDRESS:"
-            android:textColor="@color/colorAccent"
-            app:layout_constraintTop_toBottomOf="@+id/pictureImageView"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/pictureANImageView"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_margin="8dp"/>
         <TextView
@@ -59,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ADDRESS"
-            app:layout_constraintTop_toBottomOf="@+id/pictureImageView"
+            app:layout_constraintTop_toBottomOf="@+id/pictureANImageView"
             app:layout_constraintStart_toEndOf="@id/ADDRESS"
             android:layout_margin="8dp"/>
 
@@ -68,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DATE"
-            app:layout_constraintTop_toBottomOf="@+id/pictureImageView"
+            app:layout_constraintTop_toBottomOf="@+id/pictureANImageView"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_margin="8dp" />
         <TextView
@@ -76,8 +74,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DATE:"
-            android:textColor="@color/colorAccent"
-            app:layout_constraintTop_toBottomOf="@+id/pictureImageView"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/pictureANImageView"
             app:layout_constraintEnd_toStartOf="@id/dateTextView"
             android:layout_margin="8dp" />
         <View
@@ -92,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="HOUR START:"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateTextView"
             android:layout_margin="8dp" />
@@ -117,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TIME:"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toStartOf="@id/timeTextView"
             app:layout_constraintTop_toBottomOf="@+id/dateTextView"
             android:layout_margin="8dp" />
@@ -133,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MEMBERS:"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/timeTextView"
             android:layout_margin="8dp" />
