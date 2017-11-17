@@ -2,7 +2,7 @@ package pe.edu.upc.fitnow.models;
 
 import java.util.List;
 
-/**
+/**jac
  * Created by Dreads on 29/09/2017.
  */
 
