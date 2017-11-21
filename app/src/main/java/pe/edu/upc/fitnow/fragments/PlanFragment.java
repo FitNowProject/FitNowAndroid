@@ -1,6 +1,7 @@
 package pe.edu.upc.fitnow.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,13 +10,14 @@ import android.view.ViewGroup;
 
 import pe.edu.upc.fitnow.R;
 
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PlaceFragment extends Fragment {
+public class PlanFragment extends Fragment {
 
 
-    public PlaceFragment() {
+    public PlanFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +26,8 @@ public class PlaceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_plans, container, false);
+        return inflater.inflate(R.layout.fragment_my_plan, container, false);
     }
+
 
 }

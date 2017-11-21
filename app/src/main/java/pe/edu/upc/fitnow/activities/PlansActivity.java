@@ -51,9 +51,9 @@ public class PlansActivity extends AppCompatActivity implements View.OnClickList
 
         dots_layout = (LinearLayout) findViewById(R.id.dotsLayout);
         nextButton = (Button) findViewById(R.id.nextButton);
-        skipButton = (Button) findViewById(R.id.skipButton);
+        //skipButton = (Button) findViewById(R.id.skipButton);
         nextButton.setOnClickListener(this);
-        skipButton.setOnClickListener(this);
+        //skipButton.setOnClickListener(this);
 
         createDots(0);
 
@@ -69,10 +69,10 @@ public class PlansActivity extends AppCompatActivity implements View.OnClickList
                 createDots(position);
                 if (position == layouts.length-1){
                     nextButton.setText("Start");
-                    skipButton.setVisibility(View.INVISIBLE);
+                    //skipButton.setVisibility(View.INVISIBLE);
                 }else{
                     nextButton.setText("Next");
-                    skipButton.setVisibility(View.VISIBLE);
+                    //skipButton.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -113,15 +113,15 @@ public class PlansActivity extends AppCompatActivity implements View.OnClickList
             case R.id.nextButton:
                 loadNextSlide();
                 break;
-            case R.id.skipButton:
+            /*case R.id.skipButton:
                 loadHome();
                 new PreferenceManager(this).writePreference();
-                break;
+                break;*/
         }
     }
 
     private void loadHome(){
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, ProgramPlanActivity.class));
         finish();
     }
 

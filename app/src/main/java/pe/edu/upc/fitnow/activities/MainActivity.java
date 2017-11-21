@@ -1,25 +1,18 @@
 package pe.edu.upc.fitnow.activities;
 
-import android.content.res.Configuration;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
 import pe.edu.upc.fitnow.R;
-import pe.edu.upc.fitnow.adapters.EventsAdapter;
 import pe.edu.upc.fitnow.fragments.ChatFragment;
 import pe.edu.upc.fitnow.fragments.FoodFragment;
 import pe.edu.upc.fitnow.fragments.HomeFragment;
 import pe.edu.upc.fitnow.fragments.PersonalFragment;
-import pe.edu.upc.fitnow.fragments.PlaceFragment;
-import pe.edu.upc.fitnow.model.EventsRepository;
-
-import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+import pe.edu.upc.fitnow.fragments.PlanFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -49,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_food:
                     return new FoodFragment();
                 case R.id.navigation_place:
-                    return new PlaceFragment();
+                    return new PlanFragment();
                 case R.id.navigation_personal:
                     return new PersonalFragment();
                 case R.id.navigation_chat:
