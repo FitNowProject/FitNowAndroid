@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     Button signUpNowButton, loginSignInButton;
     EditText loginEmailEditText, loginPasswordEditText;
+    TextView validatorTextView;
 
     FirebaseAuth.AuthStateListener mAuthListener;
     @Override
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         loginSignInButton = (Button) findViewById(R.id.loginSignInButton) ;
         loginEmailEditText = (EditText) findViewById(R.id.loginEmailEditText);
         loginPasswordEditText = (EditText) findViewById(R.id.loginPasswordEditText);
+        validatorTextView = (TextView) findViewById(R.id.validatorTextView);
         signUpNowButton.setOnClickListener(this);
         loginSignInButton.setOnClickListener(this);
 
@@ -77,17 +80,22 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //new PreferenceManager(this).clearPreferences();
         switch (view.getId()){
             case R.id.loginSignInButton:
-                String emailInicio = loginEmailEditText.getText().toString();
-                String passInicio = loginPasswordEditText.getText().toString();
-                signin(emailInicio, passInicio);
-                //startActivity(new Intent(this, MainActivity.class));
-                loadSlides(view);
-                break;
+                if (loginEmailEditText.getText().toString().isEmpty()){
+                    validatorTextView.setVisibility(View.VISIBLE);
+                    break;
+                }else {
+                    String emailInicio = loginEmailEditText.getText().toString();
+                    String passInicio = loginPasswordEditText.getText().toString();
+                    signin(emailInicio, passInicio);
+                    //startActivity(new Intent(this, MainActivity.class));
+                    loadSlides(view);
+                    break;
+                }
             case R.id.signUpNowButton:
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
         }
-        finish();
+        //finish();
     }
     @Override
     protected void onStart() {

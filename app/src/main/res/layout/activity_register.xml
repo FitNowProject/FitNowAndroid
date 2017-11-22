@@ -33,7 +33,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:inputType="text"
         android:hint="First Name"
+        android:digits="q,w,e,r,t,z,u,i,o,p,a,s,d,f,g,h,j,k,l,y,x,c,v,b,n,m"
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintTop_toBottomOf="@id/regTitleTextView"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -44,7 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:inputType="text"
         android:hint="Last Name"
+        android:digits="q,w,e,r,t,z,u,i,o,p,a,s,d,f,g,h,j,k,l,y,x,c,v,b,n,m"
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintTop_toBottomOf="@id/regFNEditText"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -55,6 +59,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:digits="0,1,2,3,4,5,6,7,8,9,q,w,e,r,t,z,u,i,o,p,a,s,d,f,g,h,j,k,l,y,x,c,v,b,n,m,_,-,@,."
+        android:maxLength="28"
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintTop_toBottomOf="@id/regLNEditText"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -64,7 +71,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:hint="Password"
+        android:hint="Password (Min 6 letters)"
+        android:inputType="textPassword"
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintTop_toBottomOf="@id/regEmailEditText"
         app:layout_constraintStart_toStartOf="parent"/>

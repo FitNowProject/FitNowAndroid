@@ -241,7 +241,7 @@ public class CreateEventActivity extends AppCompatActivity {
     }
 
     public void spinnerMembers(){
-        String[] numero = {"10","13","15","17","20","22","25"};
+        String[] numero = {"10","15","20","25"};
         ArrayAdapter<String> activitiesAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_dropdown_item_1line, numero);
         activitiesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         quantitySpinner.setAdapter(activitiesAdapter);

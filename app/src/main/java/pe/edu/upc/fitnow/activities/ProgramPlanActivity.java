@@ -20,7 +20,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import pe.edu.upc.fitnow.R;
-import pe.edu.upc.fitnow.fragments.HomeFragment;
+//import pe.edu.upc.fitnow.fragments.HomeFragment;
 import pe.edu.upc.fitnow.fragments.MyPlanFragment;
 import pe.edu.upc.fitnow.fragments.OtherPlansFragment;
 

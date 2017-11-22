@@ -121,7 +121,7 @@ public class PlansActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void loadHome(){
-        startActivity(new Intent(this, ProgramPlanActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
         finish();
     }
 

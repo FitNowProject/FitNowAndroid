@@ -12,11 +12,7 @@ import pe.edu.upc.fitnow.fragments.ChatFragment;
 import pe.edu.upc.fitnow.fragments.FoodFragment;
 import pe.edu.upc.fitnow.fragments.FitNowFragment;
 import pe.edu.upc.fitnow.fragments.PersonalFragment;
-<<<<<<< HEAD
 import pe.edu.upc.fitnow.fragments.PlanFragment;
-=======
-import pe.edu.upc.fitnow.fragments.PlaceFragment;
->>>>>>> jose's_branch
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
