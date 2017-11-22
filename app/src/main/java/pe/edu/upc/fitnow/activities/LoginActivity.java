@@ -74,13 +74,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        new PreferenceManager(this).clearPreferences();
+        //new PreferenceManager(this).clearPreferences();
         switch (view.getId()){
             case R.id.loginSignInButton:
                 String emailInicio = loginEmailEditText.getText().toString();
                 String passInicio = loginPasswordEditText.getText().toString();
                 signin(emailInicio, passInicio);
-                startActivity(new Intent(this, MainActivity.class));
+                //startActivity(new Intent(this, MainActivity.class));
                 loadSlides(view);
                 break;
             case R.id.signUpNowButton:
