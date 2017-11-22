@@ -1,64 +1,124 @@
 package pe.edu.upc.fitnow.model;
 
-import android.os.Bundle;
-
 /**
  * Created by Dreads on 16/10/2017.
  */
 
 public class Event {
-    private String name;
+
+    private String date;
+    private String hour_start;
+    private int members;
+    private String time;
     private String description;
-    private int pictureId;
+    //TYPE EVENT
+    private String image;
+    private String type;
+    //PLACE
+    private String address;
 
-    public Event() {
-    }
+    //****
+    private String typeevent;
+    private String place;
 
-    public Event(String name, String description, int pictureId) {
-        this.name = name;
+    public Event(String date, String hour_start, int members, String time, String description, String typeevent, String place) {
+        this.date = date;
+        this.hour_start = hour_start;
+        this.members = members;
+        this.time = time;
         this.description = description;
-        this.pictureId = pictureId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Event setName(String name) {
-        this.name = name;
-        return this;
+        this.typeevent = typeevent;
+        this.place = place;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public Event setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public Event setPlace(String place) {
+        this.place = place;
         return this;
     }
 
-    public int getPictureId() {
-        return pictureId;
+    public String getImage() {
+        return image;
     }
 
-    public Event setPictureId(int pictureId) {
-        this.pictureId = pictureId;
+    public Event setImage(String image) {
+        this.image = image;
         return this;
     }
 
-    public Bundle toBundle(){
-        Bundle bundle = new Bundle();
-        bundle.putString("name", name);
-        bundle.putString("description", description);
-        bundle.putInt("picture_id", pictureId);
-        return  bundle;
+    public String getType() {
+        return type;
     }
 
-    public static Event front(Bundle bundle){
-        Event event = new Event();
-        return event.setName(bundle.getString("name"))
-                .setDescription(bundle.getString("description"))
-                .setPictureId(bundle.getInt("picture_id"));
+    public Event setType(String type) {
+        this.type = type;
+        return this;
+    }
+
+    public Event() {
+    }
+    public String getTypeevent() {
+        return typeevent;
+    }
+
+    public Event setTypeevent(String typeevent) {
+        this.typeevent = typeevent;
+        return this;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public Event setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public Event setDate(String date) {
+        this.date = date;
+        return this;
+    }
+
+    public String getHour_start() {
+        return hour_start;
+    }
+
+    public Event setHour_start(String hour_start) {
+        this.hour_start = hour_start;
+        return this;
+    }
+
+    public int getMembers() {
+        return members;
+    }
+
+    public Event setMembers(int members) {
+        this.members = members;
+        return this;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public Event setTime(String time) {
+        this.time = time;
+        return this;
     }
 }
