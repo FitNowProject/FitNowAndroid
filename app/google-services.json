@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "220044079146",
+    "firebase_url": "https://fitnowandroid-41dc3.firebaseio.com",
+    "project_id": "fitnowandroid-41dc3",
+    "storage_bucket": "fitnowandroid-41dc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220044079146:android:15cdabdf3a02d4d8",
+        "android_client_info": {
+          "package_name": "pe.edu.upc.fitnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220044079146-h2gnvlc32o3joib40ordgsn3ivv3177p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2iZhLRSO_GZYG8N8lDU52oLg8SgQZ_LI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
