@@ -12,7 +12,7 @@ import pe.edu.upc.fitnow.fragments.ChatFragment;
 import pe.edu.upc.fitnow.fragments.FoodFragment;
 import pe.edu.upc.fitnow.fragments.FitNowFragment;
 import pe.edu.upc.fitnow.fragments.PersonalFragment;
-import pe.edu.upc.fitnow.fragments.PlaceFragment;
+import pe.edu.upc.fitnow.fragments.PlanFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_food:
                     return new FoodFragment();
                 case R.id.navigation_place:
-                    return new PlaceFragment();
+                    return new PlanFragment();
                 case R.id.navigation_personal:
                     return new PersonalFragment();
                 case R.id.navigation_chat:
