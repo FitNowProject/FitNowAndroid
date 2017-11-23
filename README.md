@@ -2,8 +2,5 @@
 
 Este es un proyecto desarrollado en Android.
 
-<<<<<<< HEAD
-Jacqueline
-=======
 Kevin
->>>>>>> master
+
