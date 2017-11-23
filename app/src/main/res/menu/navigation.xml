@@ -25,8 +25,8 @@
         android:title="@string/title_personals" />
 
     <item
-        android:id="@+id/navigation_chat"
-        android:icon="@drawable/ic_chat_black_24dp"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_person_black_24dp"
         android:title="@string/title_chats" />
 
 </menu>

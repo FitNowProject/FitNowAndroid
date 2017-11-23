@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import pe.edu.upc.fitnow.R;
-import pe.edu.upc.fitnow.fragments.ChatFragment;
+import pe.edu.upc.fitnow.fragments.ProfileFragment;
 import pe.edu.upc.fitnow.fragments.FoodFragment;
 import pe.edu.upc.fitnow.fragments.FitNowFragment;
 import pe.edu.upc.fitnow.fragments.PersonalFragment;
@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     return new PlanFragment();
                 case R.id.navigation_personal:
                     return new PersonalFragment();
-                case R.id.navigation_chat:
-                    return new ChatFragment();
+                case R.id.profile:
+                    return new ProfileFragment();
         }
         return null;
     }
