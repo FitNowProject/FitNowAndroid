@@ -39,9 +39,14 @@ dependencies {
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.github.snowdream.android:smartimageview:0.0.2'
     compile 'com.amitshekhar.android:android-networking:1.0.0'
+    //FIREBASE
+    compile 'com.google.firebase:firebase-storage:11.0.0'
+
     testCompile 'junit:junit:4.12'
 
 }
+
+
 
 
 apply plugin: 'com.google.gms.google-services'

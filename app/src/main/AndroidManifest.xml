@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pe.edu.upc.fitnow">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -23,7 +24,8 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value="pe.edu.upc.fitnow.activities.MainActivity" />
 
-        <activity android:name=".activities.LoginActivity"
+        <activity
+            android:name=".activities.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,8 +34,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.PlansActivity" />
-        <activity android:name=".activities.RegisterActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activities.ProgramPlanActivity"
             android:label="@string/title_activity_program_plan"
@@ -44,7 +47,18 @@
                 android:value="android.support.v7.app.AppCompatActivity" />
         </activity>
         <activity android:name=".activities.CreateEventActivity" />
-        <activity android:name=".activities.ExerciceListActivity"></activity>
+        <activity android:name=".activities.ExerciceListActivity" />
+        <activity android:name=".activities.PhotoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            >
+        </activity>
+        <activity android:name=".activities.Photo2Activity"></activity>
+        <activity android:name=".activities.ProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
