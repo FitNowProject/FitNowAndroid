@@ -92,8 +92,8 @@
                         android:layout_height="match_parent">
                         <ImageButton
                             android:id="@+id/addphoto"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:background="#0000"
                             android:src="@drawable/ic_add_a_photo_black_24dp"
                             />
@@ -132,7 +132,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp">
         <LinearLayout
-            android:paddingLeft="55dp"
+            android:paddingLeft="85dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -145,7 +145,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
+                android:paddingLeft="30dp"
                 android:text="fitness, cycling" />
         </LinearLayout>
     </LinearLayout>
@@ -155,7 +155,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp">
         <LinearLayout
-            android:paddingLeft="55dp"
+            android:paddingLeft="85dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -168,8 +168,9 @@
                 android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text=" Male" />
+                android:paddingLeft="30dp"
+                android:text=" Male"
+                android:textSize="15sp"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -178,7 +179,7 @@
         android:gravity="center"
         android:layout_marginTop="5dp">
         <LinearLayout
-            android:paddingLeft="55dp"
+            android:paddingLeft="85dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
@@ -193,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
                 android:text="999999999"
-                android:textSize="14dp"/>
+                android:textSize="15sp"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -206,8 +207,6 @@
             android:paddingLeft="55dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-
 
         </LinearLayout>
     </LinearLayout>
